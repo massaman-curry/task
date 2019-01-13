@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Taskleaf</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="app_title navbar navbar-expand-md navbar-light bg-light">
+      <span class="navbar-brand">TaskLeaf</span>
+    </nav>
+    <div class="container">
+    <% if flash.notice.present? %>
+      <div class="alert alert-success">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+      <%= yield %>
+    </div>
+  </body>
+</html>
+
