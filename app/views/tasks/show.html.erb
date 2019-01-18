@@ -15,7 +15,7 @@
 	</tr>
 	<tr>
 		<th><%= Task.human_attribute_name(:description) %></th>
-		<td><%= simple_format(h(@task.description), {},sanitize: false, wrapper_tag: "div") %></td>
+		<td><%= auto_link(simple_format(h(@task.description), {}, sanitize: false, wrapper_tag: "div")) %></td>
 	</tr>
 	<tr>
 		<th><%= Task.human_attribute_name(:created_at) %></th>
@@ -29,3 +29,4 @@
 </table>
 
 <%= link_to '編集', edit_task_path(params[:id]), class: 'btn btn-primary mr-3' %>
+<%= link_to '削除', task_path(params[:id]), method: :delete, class: 'btn btn-danger mr-3' %>

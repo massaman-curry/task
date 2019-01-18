@@ -64,3 +64,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # added by me
 gem 'bootstrap'
 gem 'bcrypt'
+gem 'rails_autolink'
